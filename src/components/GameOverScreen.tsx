@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import { useState, Dispatch, SetStateAction } from "react";
 import { useSelector } from "react-redux";
 import { TFinalMessage } from "@/types";
@@ -15,6 +16,7 @@ export default function GameOverScreen({ playerName, loading, setLoading }: IGam
   const points = useSelector((state: any) => state.pointsCounter.value);
   const [finalMessage, setFinalMessage] = useState<TFinalMessage | undefined>();
   const [requestDone, setRequestDone] = useState<boolean>(false);
+  const router = useRouter();
 
   if (requestDone === false) {
     setRequestDone(true);
@@ -30,6 +32,7 @@ export default function GameOverScreen({ playerName, loading, setLoading }: IGam
       .then((json) => setFinalMessage(json))
       .finally(() => {
         setLoading(false);
+        router.refresh();
       })
   }
 
