@@ -15,11 +15,12 @@ export default function GameOverScreen({ playerName, loading, setLoading }: IGam
   const points = useSelector((state: any) => state.pointsCounter.value);
   const [finalMessage, setFinalMessage] = useState<TFinalMessage | undefined>();
   const [requestDone, setRequestDone] = useState<boolean>(false);
-
+  const apiUrl = process.env.API_URL;
+  
   if (requestDone === false) {
     setRequestDone(true);
     setLoading(true);
-    fetch('http://localhost:3000/api/addToRanking', {
+    fetch(`${apiUrl}/api/addToRanking`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
