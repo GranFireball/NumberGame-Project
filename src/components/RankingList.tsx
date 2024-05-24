@@ -1,12 +1,28 @@
+'use client'
+
+import { useEffect, useState } from "react";
 import { TRankingPlayer } from "@/types";
 import LoadingSpinner from "./LoadingSpinner";
 import RankingPlayer from "./RankingPlayer";
 
-interface IRankingListProps {
-  rankingPlayers: TRankingPlayer[] | undefined;
-}
+export default function RankingList() {
+  const [rankingPlayers, setRankingPlayers] = useState<TRankingPlayer[]>();
 
-export default function RankingList({ rankingPlayers }: IRankingListProps) {
+  useEffect(() => {
+    fetch('http://localhost:3000/api/ranking', {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+      .then((data) => data.json())
+      .then((json) => {
+        setRankingPlayers(json.sort(function (playerA: { points: number }, playerB: { points: number }) {
+          return playerB.points - playerA.points;
+        }))
+      })
+  }, []);
+
   return (
     <div className=" flex flex-col justify-center items-center gap-5 text-center mt-[-20px] p-5 border-2 border-blue-800 rounded-md bg-black text-white">
       <h1 className="text-6xl mb-20">TOP 10</h1>
