@@ -7,10 +7,9 @@ import RankingPlayer from "./RankingPlayer";
 
 export default function RankingList() {
   const [rankingPlayers, setRankingPlayers] = useState<TRankingPlayer[]>();
-  const apiUrl = process.env.API_URL;
-  
+
   useEffect(() => {
-    fetch(`${apiUrl}/api/ranking`, {
+    fetch('/api/ranking', {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
