@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Sobre o Projeto
 
-## Getting Started
+Esse projeto possui 3 páginas:
+- Página Inicial (com um botão direcionando para a Página do Jogo, e outro para a Página do Ranking)
+- Página do Jogo (com um botão para retornar para a Página Inicial, uma caixa de texto e um botão para interagir/jogar)
+- Página do Ranking (com um botão para a Página Inicial, e a lista dos Top 10 jogadores que fizeram mais pontos no jogo)
 
-First, run the development server:
+## Fluxo da Página do Jogo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Na Página do Jogo, existem as telas de Jogo e de Fim de Jogo;
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Ao entrar nessa página, estará a tela de Jogo, que solicita o nome do jogador que aparecerá na Página de Ranking caso consiga uma das 10 maiores pontuações;
+- Após inserir o nome, é iniciado o jogo;
+- Ao perder o jogo, aparece a tela de Fim de jogo mostrando a pontuação final do jogador e informando se o jogador entrou ou não para o Ranking do Top 10;
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sobre o Jogo
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Objetivo: fazer a maior quantidade de pontos;
 
-## Learn More
+Dados iniciais:
+- Round 1;
+- 3 vidas;
+- 0 pontos;
+- Número sorteado (1 até 5)
 
-To learn more about Next.js, take a look at the following resources:
+Como funciona: 
+- Será sorteado um número aleatório no inicío de cada Round (de 1 até o número do Round + 4), e o jogador terá que adivinhar esse número;
+- São 3 tentativas por round para adivinhar;
+- Se adivinhar, ganha a seguinte quantidade de pontos ((4 - quantidade de tentativas utilizadas) * número do Round) e avança para o próximo Round;
+- Se não adivinhar, perde 1 vida e avança para o próximo Round;
+- A cada tentativa que errar o número, é informado se o número sorteador é maior ou menor que o número inserido pelo jogador;
+- Se perder 3 vidas, o jogo termina.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
