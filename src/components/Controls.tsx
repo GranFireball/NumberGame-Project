@@ -47,10 +47,10 @@ export default function Controles({ playerName, setPlayerName, gameOver, setGame
   }
 
   function newRound() {
-    setTimeout(() => dispatch(clearAttempts()), 2000);
-    setTimeout(() => dispatch(incrementRound()), 3000);
-    setTimeout(() => dispatch(incrementAttempt()), 4000);
-    setTimeout(() => setLoading(false), 4000);
+    setTimeout(() => dispatch(clearAttempts()), 4000);
+    setTimeout(() => dispatch(incrementRound()), 5000);
+    setTimeout(() => dispatch(incrementAttempt()), 6000);
+    setTimeout(() => setLoading(false), 7000);
   }
 
   function checkNumber(numberInput: number) {
@@ -68,8 +68,8 @@ export default function Controles({ playerName, setPlayerName, gameOver, setGame
           newRound();
         }
         else {
-          setTimeout(() => setGameOver(true), 2000);
-          setTimeout(() => setLoading(false), 3000);
+          setTimeout(() => setGameOver(true), 4000);
+          setTimeout(() => setLoading(false), 5000);
         }
       }
       else {
@@ -80,7 +80,7 @@ export default function Controles({ playerName, setPlayerName, gameOver, setGame
           dispatch(answerAttempt("Errou! O número é maior que " + numberInput));
         }
         dispatch(incrementAttempt());
-        setTimeout(() => setLoading(false), 2000);
+        setTimeout(() => setLoading(false), 3000);
       }
     }
   }
