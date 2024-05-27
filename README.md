@@ -24,7 +24,7 @@ Dados iniciais:
 - Número sorteado (1 até 5)
 
 Como funciona: 
-- Será sorteado um número aleatório no inicío de cada Round (de 1 até o número do Round + 4), e o jogador terá que adivinhar esse número;
+- Será sorteado um número aleatório no início de cada Round (de 1 até o número do Round + 4), e o jogador terá que adivinhar esse número;
 - São 3 tentativas por round para adivinhar;
 - Se adivinhar, ganha a seguinte quantidade de pontos ((4 - quantidade de tentativas utilizadas) * número do Round) e avança para o próximo Round;
 - Se não adivinhar, perde 1 vida e avança para o próximo Round;
