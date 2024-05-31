@@ -1,3 +1,7 @@
+![home](https://github.com/GranFireball/NumberGame-Project/assets/61765704/4429be06-8179-43f9-bd46-d602a6870be3)
+![jogo](https://github.com/GranFireball/NumberGame-Project/assets/61765704/dace0aae-6815-4878-8077-81e3f56f60d1)
+![ranking](https://github.com/GranFireball/NumberGame-Project/assets/61765704/1aefa601-5bf8-41e8-983f-1580f095a566)
+
 ## Sobre o Projeto
 
 Esse projeto possui 3 páginas:
@@ -31,6 +35,8 @@ Como funciona:
 - A cada tentativa que errar o número, é informado se o número sorteador é maior ou menor que o número inserido pelo jogador;
 - Se perder 3 vidas, o jogo termina.
 
+## Link do Vídeo apresentando o Projeto
 
+Link: https://www.linkedin.com/feed/update/urn:li:activity:7200891306926071808/
 
 
